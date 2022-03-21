@@ -1,13 +1,50 @@
-@model IEnumerable<MVC_CrudOpe.Models.MovieTable>
+﻿@model MVC_CodeFirstEx.Models.Student
+
 @{
-    ViewBag.Title = "GetMovieName";
+    ViewBag.Title = "Details";
 }
 
-<h2>GetMovieName</h2>
+<h2>Details</h2>
 
-@foreach(var item in Model)
-            {
-                 <li>@item.Mid</li>
-                <li>@item.Moviename</li>
-                <li>@item.DateofRelease</li>
-            }
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Percentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Percentage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
